@@ -12,6 +12,14 @@ Snake Game
   - Lower Saturation of the Snake to make the visual more pleasing to the player.
   - Fixed Timestep of 0.06 instead of 0.04 for an easier learning curve.
   - Snake prefab (body) of Scale 0.75 instead of 0.90. The reason for this is that I wanted to distinguish the larger Head to the body so that the entire shape resembles more of an actual snake and makes it clear where the Head of the snake is at all times, which is what the Player will control.
-  - Lastly at the start of the game, the Player will start with just the head instead of having an initial size of 4.
+  - Lastly at the start of the game, the Player will start with just the head instead of having an initial size of 8.
   - For the code, I've added commentary as to why each line of code is needed.
   
+  Zigurous Version
+  
+![snake1](https://user-images.githubusercontent.com/88602267/145721771-021bc947-bb9b-4ad1-b202-1b529c5a5cb0.gif)
+
+  My Version
+  
+![snake2](https://user-images.githubusercontent.com/88602267/145722132-aa3e98d0-f274-4b7f-ba50-0a7706f6170d.gif)
+
