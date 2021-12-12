@@ -24,5 +24,5 @@ Snake Game
 ![snake2](https://user-images.githubusercontent.com/88602267/145722132-aa3e98d0-f274-4b7f-ba50-0a7706f6170d.gif)
 
 ### Edge Cases 
-- The two main edge cases that I've found is being able to go in the opposite direction you're going which will result in a "game over" as well as the food pellets spawning on the snake's body. These will be the two problems that the video did not cover which I'll try my best to solve.
+- The two prominent edge cases that I've found are going in the opposite direction you're going, which will result in a "game over" and the food pellets spawning on the snake's body. These will be the two problems that the video did not cover, which I'll try to solve.
 
