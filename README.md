@@ -27,3 +27,10 @@ Snake Game
 - The two prominent edge cases that I've found are going in the opposite direction you're going, which will result in a "game over" and the food pellets spawning on the snake's body. These will be the two problems that the video did not cover, which I'll try to solve.
 - One implementation that I would like to make is to add arrow keys as a secondary option.
 
+## 12/13/2021 - Fixing edge cases and implementing arrow controls:
+  - I've gone ahead and implemented the arrow keys, which wasn't difficult.![image](https://user-images.githubusercontent.com/88602267/145889302-0ec32886-9b72-40c5-ad42-ad6174c65054.png)
+- One question that I came across was why Zigurous didn't implement an else statement at the end. In java, I learned that we always want the last resort option if all of our "if" and "else if" conditions fail. While this is generally the case, placing an else statement wouldn't make sense because we need a condition after pressing D or the right arrow.
+- When fixing the edge case of going in the opposite direction, it was a great reminder that "or" statements take priority. ![image](https://user-images.githubusercontent.com/88602267/145894789-89a02163-b808-408e-bc25-9c93fe6c5b2f.png)
+- The code below has a problem where C# will check the conditions based on where "||" is splitting the condition. In this case, the "&&" statement will pair with arrow keys disabling the ability to go the opposite direction on arrow keys, but won't apply to WASD keys. ![image](https://user-images.githubusercontent.com/88602267/145896156-818d9c36-c6b9-4a20-89e8-71d9f9098a5e.png)
+- Another option that would make the code cleaner is adding parenthesis at the correct locations. ![image](https://user-images.githubusercontent.com/88602267/145896039-c96e2d3e-3595-4cd3-9ebc-2313b1b1d843.png)
+
