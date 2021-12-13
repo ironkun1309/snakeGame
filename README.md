@@ -23,6 +23,7 @@ Snake Game
   
 ![snake2](https://user-images.githubusercontent.com/88602267/145722132-aa3e98d0-f274-4b7f-ba50-0a7706f6170d.gif)
 
-### Edge Cases 
+### Edge Cases and future implementation
 - The two prominent edge cases that I've found are going in the opposite direction you're going, which will result in a "game over" and the food pellets spawning on the snake's body. These will be the two problems that the video did not cover, which I'll try to solve.
+- One implementation that I would like to make is to add arrow keys as a secondary option.
 
