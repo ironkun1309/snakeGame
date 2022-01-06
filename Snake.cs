@@ -7,7 +7,7 @@ public class Snake : MonoBehaviour {
                                                               // Since we changed the way we will start our game, we must initialize first.
     public Transform segmentPrefab; // usually our type will be GameObject, however, since we have the Generic Transform, we will use that for consistency.
                                     // This variable will create a new property called Segment Prefab in Unity for Snake.
-    public int initialSize = 4; // Our initialze Size of our snake when the game begins
+    public int initialSize = 1; // Our initialze Size of our snake when the game begins
 
     private void Start() {
         ResetState();
@@ -16,13 +16,13 @@ public class Snake : MonoBehaviour {
     }
 
     private void Update() { // A Function (set of instructions that perform a task.) call automatically every frame object is active.
-        if (Input.GetKeyDown(KeyCode.W)) { // // Syntax of if the W key is pressed down
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && direction != Vector2.down) { // // Syntax of if the W key is pressed down
             direction = Vector2.up; // direction will go up
-        } else if (Input.GetKeyDown(KeyCode.S)) {
+        } else if ((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && direction != Vector2.up) {
             direction = Vector2.down;
-        } else if (Input.GetKeyDown(KeyCode.A)) {
+        } else if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) && direction != Vector2.right) {
             direction = Vector2.left;
-        } else if (Input.GetKeyDown(KeyCode.D)) {
+        } else if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && direction != Vector2.left) {
             direction = Vector2.right;
         }
     }
@@ -73,7 +73,7 @@ public class Snake : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Food") { // We must manually create a Food tag in unity for this to work.
             Grow(); // Call another method after the if statement has been fulfilled.
-        } else if (other.tag == "Obstacle") {
+        } else if (other.tag == "Obstacle") { //Obstacle being the snake body
             ResetState();
         }
     }
